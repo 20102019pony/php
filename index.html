@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h3>点按钮看看~</h3>
+  <button id="myBtn">点我呀</button>
+  <p id="showText"></p >
+
+  <script>
+    let btn = document.getElementById('myBtn');
+    let text = document.getElementById('showText');
+    let count = 0;
+
+    btn.onclick = function() {
+      count++;
+      if (count === 1) {
+        text.textContent = '你第一次点我啦！';
+      } else if (count < 5) {
+        text.textContent = `你已经点了${count}次咯~`;
+      } else {
+        text.textContent = `哇，你点了我${count}次，好执着！`;
+      }
+    }
+  </script>
+</body>
+</html>
